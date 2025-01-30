@@ -1,0 +1,5 @@
+# used for local files, that never will be committed
+local/
+
+# todo list
+todo.txt
