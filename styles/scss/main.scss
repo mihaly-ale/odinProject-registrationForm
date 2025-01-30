@@ -6,3 +6,30 @@
 @use 'pages' as *;
 @use 'themes' as *;
 @use 'vendors' as *;
+
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@font-face {
+	font-family: Daggersquare;
+	src: url(../../assets/fonts/daggersquare-webfont.woff2);
+	font-display: swap;
+}
+
+$primary: #f3d117;
+$secondary: #ad552d;
+$light: #afb7ba;
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// Then add additional custom code here
+:root {
+	--ff-title: Daggersquare, sans-serif;
+}
+
+h1 {
+	font-family: var(--ff-title);
+}
+

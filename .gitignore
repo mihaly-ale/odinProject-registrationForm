@@ -1,5 +1,8 @@
 # used for local files, that never will be committed
 local/
 
+# node modules
+node_modules/
+
 # todo list
 todo.txt
