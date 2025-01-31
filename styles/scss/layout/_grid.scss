@@ -1,0 +1,33 @@
+body {
+	min-height: 100vh;
+	height: 100svh;
+}
+
+// 768px
+@media screen and (min-width: 48em) {
+	body {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+			'header header header'
+			'heroImage main main'
+			'footer footer footer';
+	}
+
+	header {
+		grid-area: header;
+	}
+
+	main {
+		grid-area: main;
+	}
+
+	#hero-image {
+		grid-area: heroImage;
+	}
+
+	footer {
+		grid-area: footer;
+	}
+}
+

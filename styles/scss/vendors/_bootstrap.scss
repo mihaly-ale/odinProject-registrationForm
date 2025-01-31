@@ -1,2 +1,7 @@
+// abstract/variables has the overrides
+// as per BS documentation overrides come here
+// Sass will use this overrides as per !default flag
+@use '../abstracts/' as *;
+
 @import '../../../node_modules/bootstrap/scss/bootstrap';
 
