@@ -6,3 +6,7 @@ node_modules/
 
 # todo list
 todo.txt
+
+# TEMPORARY CSS FILE IGNORES
+main.css.map
+main-min.css
