@@ -19,6 +19,14 @@ h1 {
   font-family: var(--ff-title);
 }
 
+.legal-links {
+  max-width: 600px;
+}
+
+.dev-logo {
+  transform: translateY(-5px);
+}
+
 body {
   min-height: 100vh;
   height: 100svh;

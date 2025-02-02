@@ -36,7 +36,7 @@
 			id="hero-image"
 			class="img-fluid" />
 
-		<main>
+		<main class="container">
 			<div class="form-wrapper">
 				<form action="" id="reg-form">
 					<div class="row">
@@ -72,28 +72,45 @@
 			</div>
 		</main>
 
-		<footer class="container">
-			<div class="primary-footer">
+		<footer class="px-0 pt-5">
+			<div class="primary-footer vstack align-items-center mb-5">
 				<img
 					src="assets/logos/bellers-logo-light-bg.png"
 					alt="Bellers."
-					class="img-fluid" />
-				<ul>
+					class="img-fluid mb-5"
+					width="250" />
+				<ul
+					class="legal-links list-unstyled d-flex flex-column flex-sm-row gap-3">
 					<li>
-						<a href="/">Cookie Policy</a>
+						<a
+							href="/"
+							class="p-2 fs-5 link-dark link-underline-opacity-0-hover"
+							>Cookie Policy</a
+						>
 					</li>
 					<li>
-						<a href="/">Privacy Policy</a>
+						<a
+							href="/"
+							class="p-2 fs-5 link-dark link-underline-opacity-0-hover"
+							>Privacy Policy</a
+						>
 					</li>
 					<li>
-						<a href="/">Booking Policy</a>
+						<a
+							href="/"
+							class="p-2 fs-5 link-dark link-underline-opacity-0-hover"
+							>Booking Policy</a
+						>
 					</li>
 				</ul>
 			</div>
-			<div class="secondary_footer">
-				<p>
+			<div class="secondary_footer text-bg-dark text-center">
+				<p class="m-0 p-3">
 					Made for
-					<a href="https://www.theodinproject.com" target="_blank"
+					<a
+						href="https://www.theodinproject.com"
+						target="_blank"
+						class="fst-italic link-underline-opacity-0-hover"
 						>The Odin Project</a
 					>
 					by
@@ -101,9 +118,10 @@
 						><img
 							src="/assets/logos/dev-logo.png"
 							alt="Mihály Ale."
-							class="img-fluid"
+							class="img-fluid dev-logo"
 							width="50"
 					/></a>
+					.
 				</p>
 			</div>
 		</footer>
