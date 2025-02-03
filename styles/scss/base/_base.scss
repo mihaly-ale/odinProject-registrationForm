@@ -3,3 +3,15 @@ img {
 	font-style: italic;
 }
 
+#hero-image {
+	object-fit: cover;
+	block-size: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+	#hero-image {
+		inline-size: 100%;
+		block-size: 350px;
+	}
+}
+

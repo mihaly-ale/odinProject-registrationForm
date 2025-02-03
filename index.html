@@ -24,6 +24,7 @@
 		<link rel="manifest" href="assets/favicons/site.webmanifest" />
 		<link rel="stylesheet" href="styles/css/main.css" />
 	</head>
+
 	<body class="bg-light">
 		<header class="mt-2 mt-md-3 mb-4 mb-md-5">
 			<h1 class="display-1 text-dark text-center px-4">
@@ -37,74 +38,131 @@
 			class="img-fluid" />
 
 		<main class="container">
-			<div class="form-wrapper">
-				<form action="" id="reg-form">
-					<div class="row">
-						<label for="name">Name:</label>
-						<input type="text" id="name" />
-						<p class="info"></p>
+			<div class="row justify-content-center form-wrapper mt-5 mt-l-0">
+				<form action="" id="reg-form" class="vstack align-items-stretch mb-3">
+					<div
+						class="form-group | d-flex flex-column flex-md-row justify-content-md-center mb-2">
+						<label
+							class="align-self-md-start text-md-end fw-normal fs-5 pb-1 pb-md-0 pt-md-2"
+							for="name"
+							>Name:</label
+						>
+						<div class="input-wrapper | ms-md-3">
+							<input
+								class="form-control form-control-lg"
+								type="text"
+								id="name" />
+							<p class="info"></p>
+						</div>
 					</div>
-					<div class="row">
-						<label for="email">Email:</label>
-						<input type="email" id="email" />
-						<p class="info"></p>
+
+					<div
+						class="form-group | d-flex flex-column flex-md-row justify-content-md-center mb-2">
+						<label
+							class="align-self-md-start text-md-end fw-normal fs-5 pb-1 pb-md-0 pt-md-2"
+							for="email"
+							>Email:</label
+						>
+						<div class="input-wrapper | ms-md-3">
+							<input
+								class="form-control form-control-lg"
+								type="email"
+								id="email" />
+							<p class="info"></p>
+						</div>
 					</div>
-					<div class="row">
-						<label for="phone">Phone:</label>
-						<input type="tel" id="phone" />
-						<p class="info"></p>
+					<div
+						class="form-group | d-flex flex-column flex-md-row justify-content-md-center mb-2">
+						<label
+							class="align-self-md-start text-md-end fw-normal fs-5 pb-1 pb-md-0 pt-md-2"
+							for="phone"
+							>Phone:</label
+						>
+						<div class="input-wrapper | ms-md-3">
+							<input
+								class="form-control form-control-lg"
+								type="tel"
+								id="phone" />
+							<p class="info"></p>
+						</div>
 					</div>
-					<div class="row">
-						<label for="password">Password:</label>
-						<input type="password" id="password" />
-						<p class="info"></p>
+					<div
+						class="form-group | d-flex flex-column flex-md-row justify-content-md-center mb-2">
+						<label
+							class="align-self-md-start text-md-end fw-normal fs-5 pb-1 pb-md-0 pt-md-2"
+							for="password"
+							>Password:</label
+						>
+						<div class="input-wrapper | ms-md-3">
+							<input
+								class="form-control form-control-lg"
+								type="password"
+								id="password" />
+							<p class="info"></p>
+						</div>
 					</div>
-					<div class="row">
-						<label for="confirm-password">Confirm Password</label>
-						<input type="password" id="confirm-password" />
-						<p class="info"></p>
+					<div
+						class="form-group | d-flex flex-column flex-md-row justify-content-md-center mb-2">
+						<label
+							class="align-self-md-start text-md-end fw-normal fs-5 pb-1 pb-md-0 pt-md-2"
+							for="confirm-password"
+							>Confirm Password:</label
+						>
+						<div class="input-wrapper | ms-md-3">
+							<input
+								class="form-control form-control-lg"
+								type="password"
+								id="confirm-password" />
+							<p class="info"></p>
+						</div>
 					</div>
-					<div class="row">
-						<button type="submit">Create Account</button>
+					<div
+						class="d-flex flex-column flex-md-row align-self-center ms-md-5 mt-5">
+						<button type="submit" class="btn btn-lg btn-primary shadow">
+							Create Account
+						</button>
 					</div>
 				</form>
-				<p>Already have an account? <a href="/login">Log in</a></p>
+				<p class="text-center fs-5 ms-md-5 mt-3">
+					Already have an account?
+					<a href="/login" class="btn btn-dark shadow">Log in</a>
+				</p>
 			</div>
 		</main>
 
-		<footer class="px-0 pt-5">
-			<div class="primary-footer vstack align-items-center mb-5">
+		<footer class="px-0 pt-5 mt-auto">
+			<div class="primary-footer | vstack align-items-center mb-5">
 				<img
 					src="assets/logos/bellers-logo-light-bg.png"
 					alt="Bellers."
 					class="img-fluid mb-5"
 					width="250" />
 				<ul
-					class="legal-links list-unstyled d-flex flex-column flex-sm-row gap-3">
+					class="legal-links | list-unstyled d-flex flex-column flex-sm-row gap-3">
 					<li>
 						<a
 							href="/"
-							class="p-2 fs-5 link-dark link-underline-opacity-0-hover"
+							class="link-dark link-underline-opacity-0-hover fs-5 p-2"
 							>Cookie Policy</a
 						>
 					</li>
 					<li>
 						<a
 							href="/"
-							class="p-2 fs-5 link-dark link-underline-opacity-0-hover"
+							class="link-dark link-underline-opacity-0-hover fs-5 p-2"
 							>Privacy Policy</a
 						>
 					</li>
 					<li>
 						<a
 							href="/"
-							class="p-2 fs-5 link-dark link-underline-opacity-0-hover"
+							class="link-dark link-underline-opacity-0-hover fs-5 p-2"
 							>Booking Policy</a
 						>
 					</li>
 				</ul>
 			</div>
-			<div class="secondary_footer text-bg-dark text-center">
+			<div class="secondary_footer | text-bg-dark text-center">
 				<p class="m-0 p-3">
 					Made for
 					<a
@@ -118,7 +176,7 @@
 						><img
 							src="assets/logos/dev-logo.png"
 							alt="Mihály Ale."
-							class="img-fluid dev-logo"
+							class="dev-logo | img-fluid"
 							width="50"
 					/></a>
 					.
