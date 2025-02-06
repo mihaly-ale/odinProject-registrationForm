@@ -7,7 +7,7 @@ function changeButtonText () {
   let message = this.previousElementSibling;
 
   currentButtonText === "Log in" ?
-    (this.textContent = "Create Account", message.textContent = "Don'have an account yet?") :
+    (this.textContent = "Create Account", message.textContent = "Don't have an account yet?") :
     (this.textContent = "Log in", message.textContent = "Already have an account?");
 }
 
