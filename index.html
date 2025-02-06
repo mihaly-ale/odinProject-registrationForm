@@ -38,7 +38,8 @@
 			class="img-fluid" />
 
 		<main class="container">
-			<div class="row justify-content-center form-wrapper mt-5 mt-l-0">
+			<div class="form-wrapper | row justify-content-center mt-5 mt-l-0">
+				<!-- registration form -->
 				<form action="" id="reg-form" class="vstack align-items-stretch mb-3">
 					<div
 						class="form-group | d-flex flex-column flex-md-row justify-content-md-center mb-2">
@@ -123,9 +124,55 @@
 						</button>
 					</div>
 				</form>
+
+				<!-- sign-in form -->
+				<form
+					action=""
+					id="signin-form"
+					class="vstack align-items-stretch mb-3">
+					<div
+						class="form-group | d-flex flex-column flex-md-row justify-content-md-center mb-2">
+						<label
+							class="align-self-md-start text-md-end fw-normal fs-5 pb-1 pb-md-0 pt-md-2"
+							for="email"
+							>Email:</label
+						>
+						<div class="input-wrapper | ms-md-3">
+							<input
+								class="form-control form-control-lg"
+								type="email"
+								id="email" />
+							<p class="info"></p>
+						</div>
+					</div>
+
+					<div
+						class="form-group | d-flex flex-column flex-md-row justify-content-md-center mb-2">
+						<label
+							class="align-self-md-start text-md-end fw-normal fs-5 pb-1 pb-md-0 pt-md-2"
+							for="password"
+							>Password:</label
+						>
+						<div class="input-wrapper | ms-md-3">
+							<input
+								class="form-control form-control-lg"
+								type="password"
+								id="password" />
+							<p class="info"></p>
+						</div>
+					</div>
+
+					<div
+						class="d-flex flex-column flex-md-row align-self-center ms-md-5 mt-5">
+						<button type="submit" class="btn btn-lg btn-primary shadow">
+							Log in
+						</button>
+					</div>
+				</form>
+
 				<p class="text-center fs-5 ms-md-5 mt-3">
 					Already have an account?
-					<a href="/login" class="btn btn-dark shadow">Log in</a>
+					<button id="toggle-button" class="btn btn-dark shadow">Log in</button>
 				</p>
 			</div>
 		</main>
