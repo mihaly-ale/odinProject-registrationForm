@@ -81,6 +81,10 @@ button[type=submit] {
     margin-inline-start: 4rem !important;
   }
 }
+form[data-invisible] {
+  display: none;
+}
+
 .legal-links {
   max-width: 600px;
 }
