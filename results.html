@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Submitted form</title>
+		<link rel="stylesheet" href="styles/css/main.css" />
+		<style>
+			body {
+				background: linear-gradient(var(--bs-primary), var(--bs-secondary));
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-flow: column nowrap;
+				gap: 2rem;
+			}
+			p {
+				max-width: 65ch;
+			}
+		</style>
+	</head>
+
+	<body class="container">
+		<h1 class="display-1">Form sent</h1>
+		<div id="results" class="mb-2"></div>
+		<p>
+			The GET method send
+			<span class="fst-italic">the form data in the URL</span>, for this reason
+			it isn't used for submitting sensitive information, and is mostly used in
+			search and similar fields, where secrecy is not important.
+		</p>
+
+		<div class="border border-1 border-dark-subtle rounded-1 py-1 px-2">
+			<p class="fst-italic">In this case :</p>
+			<div>
+				<p id="urlParagraph"></p>
+			</div>
+		</div>
+
+		<a href="/" class="fs-2 btn btn-lg btn-dark btn-outline-primary"
+			>Back to the form</a
+		>
+		<script>
+			const resultsList = document.getElementById('results');
+			const urlParagraph = document.querySelector('#urlParagraph');
+			const values = new URLSearchParams(window.location.search).forEach(
+				(value, name) => {
+					const strongElement = document.createElement('strong');
+					strongElement.innerText = name;
+					resultsList.append(strongElement);
+					resultsList.append(` : ${value}`);
+					resultsList.append(document.createElement('br'));
+					urlParagraph.innerHTML = `<strong>${window.location.search}</strong>`;
+				}
+			);
+			console.log(`${window.location.search}`);
+		</script>
+	</body>
+</html>
+
