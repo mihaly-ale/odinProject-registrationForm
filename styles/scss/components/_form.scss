@@ -57,7 +57,7 @@ button[type='submit'] {
 	}
 }
 
-form[data-invisible] {
-	display: none;
+form[data-invisible='true'] {
+	display: none !important;
 }
 

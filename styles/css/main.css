@@ -81,8 +81,8 @@ button[type=submit] {
     margin-inline-start: 4rem !important;
   }
 }
-form[data-invisible] {
-  display: none;
+form[data-invisible=true] {
+  display: none !important;
 }
 
 .legal-links {
