@@ -41,20 +41,31 @@
 		<main class="container">
 			<div class="form-wrapper | row justify-content-center mt-5 mt-l-0">
 				<!-- registration form -->
-				<form action="" id="reg-form" class="vstack align-items-stretch mb-3">
+				<form
+					action="results.html"
+					id="reg-form"
+					class="vstack align-items-stretch mb-3">
+					<p aria-hidden="true">* = Required field</p>
 					<div
 						class="form-group | d-flex flex-column flex-md-row justify-content-md-center mb-2">
 						<label
 							class="align-self-md-start text-md-end fw-normal fs-5 pb-1 pb-md-0 pt-md-2"
-							for="name"
-							>Name:</label
+							for="full-name"
+							>Name: <span class="fs-3" aria-hidden="true">*</span></label
 						>
 						<div class="input-wrapper | ms-md-3">
 							<input
 								class="form-control form-control-lg"
 								type="text"
-								id="name" />
-							<p class="info"></p>
+								id="full-name"
+								name="full-name"
+								aria-describedby="name-hint"
+								required
+								minlength="3"
+								maxlength="100" />
+							<p class="info ms-2" id="name-hint">
+								Please enter your full name.
+							</p>
 						</div>
 					</div>
 
@@ -62,15 +73,18 @@
 						class="form-group | d-flex flex-column flex-md-row justify-content-md-center mb-2">
 						<label
 							class="align-self-md-start text-md-end fw-normal fs-5 pb-1 pb-md-0 pt-md-2"
-							for="email"
-							>Email:</label
+							for="reg-email"
+							>Email: <span class="fs-3" aria-hidden="true">*</span></label
 						>
 						<div class="input-wrapper | ms-md-3">
 							<input
 								class="form-control form-control-lg"
 								type="email"
-								id="email" />
-							<p class="info"></p>
+								id="reg-email"
+								name="reg-email"
+								aria-describedby="reg-email-hint"
+								required />
+							<p class="info ms-2" id="reg-email-hint">&nbsp;</p>
 						</div>
 					</div>
 					<div
@@ -84,38 +98,51 @@
 							<input
 								class="form-control form-control-lg"
 								type="tel"
-								id="phone" />
-							<p class="info"></p>
+								id="phone"
+								name="phone"
+								aria-describedby="phone-hint" />
+							<p class="info ms-2" id="phone-hint">&nbsp;</p>
 						</div>
 					</div>
 					<div
 						class="form-group | d-flex flex-column flex-md-row justify-content-md-center mb-2">
 						<label
 							class="align-self-md-start text-md-end fw-normal fs-5 pb-1 pb-md-0 pt-md-2"
-							for="password"
-							>Password:</label
+							for="reg-password"
+							>Password: <span class="fs-3" aria-hidden="true">*</span></label
 						>
 						<div class="input-wrapper | ms-md-3">
 							<input
 								class="form-control form-control-lg"
 								type="password"
-								id="password" />
-							<p class="info"></p>
+								id="reg-password"
+								name="reg-password"
+								aria-describedby="reg-password-hint"
+								required
+								pattern="[A-Za-z]{3}[0-9]{3}" />
+							<p class="info ms-2" id="reg-password-hint">
+								Your password has to contain 3 letters and 3 numbers.
+							</p>
 						</div>
 					</div>
 					<div
 						class="form-group | d-flex flex-column flex-md-row justify-content-md-center mb-2">
 						<label
 							class="align-self-md-start text-md-end fw-normal fs-5 pb-1 pb-md-0 pt-md-2"
-							for="confirm-password"
-							>Confirm Password:</label
+							for="confirm-reg-password"
+							>Confirm Password:
+							<span class="fs-3" aria-hidden="true">*</span></label
 						>
 						<div class="input-wrapper | ms-md-3">
 							<input
 								class="form-control form-control-lg"
 								type="password"
-								id="confirm-password" />
-							<p class="info"></p>
+								id="confirm-reg-password"
+								name="confirm-reg-password"
+								aria-describedby="confirm-reg-password-hint"
+								required
+								pattern="[A-Za-z]{3}[0-9]{3}" />
+							<p class="info ms-2" id="confirm-reg-password-hint">&nbsp;</p>
 						</div>
 					</div>
 					<div
@@ -128,23 +155,27 @@
 
 				<!-- sign-in form -->
 				<form
-					action=""
+					action="results.html"
+					method="GET"
 					id="signin-form"
 					class="vstack align-items-stretch mb-3"
 					data-invisible="true">
+					<p aria-hidden="true">* = Required field</p>
 					<div
 						class="form-group | d-flex flex-column flex-md-row justify-content-md-center mb-2">
 						<label
 							class="align-self-md-start text-md-end fw-normal fs-5 pb-1 pb-md-0 pt-md-2"
-							for="email"
-							>Email:</label
+							for="user-email"
+							>Email: <span class="fs-3" aria-hidden="true">*</span></label
 						>
 						<div class="input-wrapper | ms-md-3">
 							<input
 								class="form-control form-control-lg"
 								type="email"
-								id="email" />
-							<p class="info"></p>
+								id="user-email"
+								name="user-email"
+								required />
+							<p class="info ms-2"></p>
 						</div>
 					</div>
 
@@ -152,15 +183,18 @@
 						class="form-group | d-flex flex-column flex-md-row justify-content-md-center mb-2">
 						<label
 							class="align-self-md-start text-md-end fw-normal fs-5 pb-1 pb-md-0 pt-md-2"
-							for="password"
-							>Password:</label
+							for="user-password"
+							>Password: <span class="fs-3" ria-hidden="true">*</span></label
 						>
 						<div class="input-wrapper | ms-md-3">
 							<input
 								class="form-control form-control-lg"
 								type="password"
-								id="password" />
-							<p class="info"></p>
+								id="user-password"
+								name="user-password"
+								required
+								pattern="[A-Za-z]{3}[0-9]{3}" />
+							<p class="info ms-2"></p>
 						</div>
 					</div>
 
