@@ -1,3 +1,4 @@
+// Form toggle
 const toggleBtn = document.getElementById('toggle-button');
 const regForm = document.getElementById('reg-form');
 const signinForm = document.getElementById('signin-form');
@@ -30,4 +31,32 @@ toggleBtn.addEventListener('click', function () {
 
 	changeButtonText.call(this);
 });
+
+// Form submission
+const regFormSubmitBtn = document.querySelector('#reg-form-submit');
+const nameInput = document.querySelector('#full-name');
+const signinFormSubmitBtn = document.querySelector('#signin-form-submit');
+
+regFormSubmitBtn.addEventListener('click', (e) => {
+	const isFormValid = regForm.reportValidity();
+
+	if (!isFormValid) {
+		e.preventDefault();
+		console.log('Form is invalid');
+	} else {
+		if (passwordMatchCheck() === true) {
+			console.log(`Successful submission.`);
+		}
+		regForm.submit();
+	}
+});
+
+function passwordMatchCheck() {
+	const regPassword = document.getElementById('reg-password');
+	const confirmRegPassword = document.getElementById('confirm-reg-password');
+
+	if (regPassword.value === confirmRegPassword.value) {
+		return true;
+	}
+}
 
