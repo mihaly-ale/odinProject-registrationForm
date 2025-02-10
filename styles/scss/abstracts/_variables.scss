@@ -1,3 +1,10 @@
+@use 'sass:map';
+
 $primary: #f3d117;
 $secondary: #ad552d;
 $light: #afb7ba;
+
+$custom-breakpoints: (
+	'bg-image-aside': 1120px,
+);
+

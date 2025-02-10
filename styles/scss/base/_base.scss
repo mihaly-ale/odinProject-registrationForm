@@ -1,17 +1,19 @@
+@use '../vendors/' as *;
+
 img {
 	/* renders alt text italic if image is not avail */
 	font-style: italic;
 }
 
 #hero-image {
-	object-fit: cover;
 	block-size: 100%;
 }
 
-@media screen and (max-width: 1024px) {
+// breakpoint when images goes aside
+@include media-breakpoint-down(bg-image-aside) {
 	#hero-image {
-		inline-size: 100%;
-		block-size: 350px;
+		inline-size: 100vw;
+		block-size: 250px;
 	}
 }
 
