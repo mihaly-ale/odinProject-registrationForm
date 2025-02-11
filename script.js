@@ -1,36 +1,36 @@
 // Form toggle
-const toggleBtn = document.getElementById('toggle-button');
+const toggleBtns = document.querySelectorAll('[data-toggle-target');
 const regForm = document.getElementById('reg-form');
 const signinForm = document.getElementById('signin-form');
 
-function changeButtonText() {
-	const currentButtonText = this.textContent;
-	let message = this.previousElementSibling;
-
-	currentButtonText === 'Log in'
-		? ((this.textContent = 'Create Account'),
-		  (message.textContent = "Don't have an account yet?"))
-		: ((this.textContent = 'Log in'),
-		  (message.textContent = 'Already have an account?'));
-}
-
-function displaySignInform() {
-	signinForm.setAttribute('data-invisible', 'false');
-	regForm.setAttribute('data-invisible', 'true');
-}
-
-function displayRegform() {
-	signinForm.setAttribute('data-invisible', true);
-	regForm.setAttribute('data-invisible', false);
-}
-
-toggleBtn.addEventListener('click', function () {
-	signinForm.dataset.invisible === 'true'
-		? displaySignInform()
-		: displayRegform();
-
-	changeButtonText.call(this);
+toggleBtns.forEach((button) => {
+	button.addEventListener('click', () => {
+		button.dataset.toggleTarget === 'signin-form'
+			? displaySignInform(button)
+			: displayRegform(button);
+	});
 });
+
+function displaySignInform(activeToggleButton) {
+	const activeToggleButtonWrapper = activeToggleButton.parentElement;
+	const hiddenToggle = signinForm.nextElementSibling;
+
+	signinForm.setAttribute('data-invisible', 'false');
+	hiddenToggle.setAttribute('data-invisible', 'false');
+
+	regForm.setAttribute('data-invisible', 'true');
+	activeToggleButtonWrapper.setAttribute('data-invisible', 'true');
+}
+function displayRegform(activeToggleButton) {
+	const activeToggleButtonWrapper = activeToggleButton.parentElement;
+	const hiddenToggle = regForm.nextElementSibling;
+
+	regForm.setAttribute('data-invisible', 'false');
+	hiddenToggle.setAttribute('data-invisible', 'false');
+
+	signinForm.setAttribute('data-invisible', 'true');
+	activeToggleButtonWrapper.setAttribute('data-invisible', 'true');
+}
 
 // Form submission
 const regFormSubmitBtn = document.querySelector('#reg-form-submit');

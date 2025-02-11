@@ -38,7 +38,7 @@
 			id="hero-image"
 			class="img-fluid object-fit-cover h-auto" />
 
-		<main class="container">
+		<main>
 			<!-- registration form -->
 			<form
 				action="results.html"
@@ -54,7 +54,7 @@
 							>*</span
 						></label
 					>
-					<div class="input-wrapper | w-100">
+					<div class="input-wrapper| w-100">
 						<input
 							class="form-control mb-1"
 							type="text"
@@ -152,6 +152,15 @@
 				</button>
 			</form>
 
+			<div class="text-center fs-5">
+				<p class="d-inline pe-2">Already have an account?</p>
+				<button
+					data-toggle-target="signin-form"
+					class="btn btn-dark shadow btn-outline-primary fs-5 fw-semibold border-2">
+					Log in
+				</button>
+			</div>
+
 			<!-- sign-in form -->
 			<form
 				action="results.html"
@@ -204,12 +213,12 @@
 				</button>
 			</form>
 
-			<div class="text-center fs-5">
-				<p class="d-inline pe-2">Already have an account?</p>
+			<div class="text-center fs-5" data-invisible="true">
+				<p class="d-inline pe-2">Don't have an account yet?</p>
 				<button
-					id="toggle-button"
+					data-toggle-target="reg-form"
 					class="btn btn-dark shadow btn-outline-primary fs-5 fw-semibold border-2">
-					Log in
+					Create Account
 				</button>
 			</div>
 		</main>

@@ -13911,7 +13911,7 @@ p.info {
     margin-inline-start: calc(var(--label-inline-size) + var(--label-right-margin-xxl));
   }
 }
-form[data-invisible=true] {
+[data-invisible=true] {
   display: none !important;
 }
 
