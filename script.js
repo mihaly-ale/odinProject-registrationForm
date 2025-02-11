@@ -46,8 +46,8 @@ regFormSubmitBtn.addEventListener('click', (e) => {
 	} else {
 		if (passwordMatchCheck() === true) {
 			console.log(`Successful submission.`);
+			regForm.submit();
 		}
-		regForm.submit();
 	}
 });
 
