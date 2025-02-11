@@ -36,14 +36,14 @@
 			src="assets/images/bg-image.jpg"
 			alt="A hand with chalk is grabbing a kettlebell handle."
 			id="hero-image"
-			class="img-fluid object-fit-cover h-auto" />
+			class="img-fluid object-fit-cover" />
 
-		<main>
+		<main class="container my-5">
 			<!-- registration form -->
 			<form
 				action="results.html"
 				id="reg-form"
-				class="d-flex flex-column mx-auto mb-5 gap-1 gap-xxl-4">
+				class="d-flex flex-column mx-auto mb-5 gap-2 gap-xxl-4">
 				<p class="info" aria-hidden="true">* Required field</p>
 				<div class="form-group | flex-fill">
 					<label
@@ -54,7 +54,7 @@
 							>*</span
 						></label
 					>
-					<div class="input-wrapper| w-100">
+					<div class="input-wrapper | w-100">
 						<input
 							class="form-control mb-1"
 							type="text"
@@ -152,8 +152,9 @@
 				</button>
 			</form>
 
-			<div class="text-center fs-5">
-				<p class="d-inline pe-2">Already have an account?</p>
+			<div
+				class="d-flex row-gap-2 column-gap-3 flex-wrap justify-content-center align-items-baseline mx-auto fs-5">
+				<p class="m-0">Already have an account?</p>
 				<button
 					data-toggle-target="signin-form"
 					class="btn btn-dark shadow btn-outline-primary fs-5 fw-semibold border-2">
@@ -182,7 +183,7 @@
 							id="user-email"
 							name="user-email"
 							required />
-						<p class="info ms-2"></p>
+						<p class="info ms-2">&nbsp;</p>
 					</div>
 				</div>
 
@@ -201,7 +202,7 @@
 							name="user-password"
 							required
 							pattern="[A-Za-z]{3}[0-9]{3}" />
-						<p class="info ms-2"></p>
+						<p class="info ms-2">&nbsp;</p>
 					</div>
 				</div>
 
@@ -213,8 +214,10 @@
 				</button>
 			</form>
 
-			<div class="text-center fs-5" data-invisible="true">
-				<p class="d-inline pe-2">Don't have an account yet?</p>
+			<div
+				class="d-flex row-gap-2 column-gap-3 flex-wrap justify-content-center align-items-baseline mx-auto fs-5"
+				data-invisible="true">
+				<p class="m-0">Don't have an account yet?</p>
 				<button
 					data-toggle-target="reg-form"
 					class="btn btn-dark shadow btn-outline-primary fs-5 fw-semibold border-2">
