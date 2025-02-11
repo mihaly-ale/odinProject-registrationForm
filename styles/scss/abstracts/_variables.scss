@@ -4,7 +4,16 @@ $primary: #f3d117;
 $secondary: #ad552d;
 $light: #afb7ba;
 
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/variables';
+
 $custom-breakpoints: (
-	'bg-image-aside': 1120px,
+	'bg-image-aside': 1040px,
+	'bg-image-50vw': 1600px,
 );
+
+$grid-breakpoints: map-merge($grid-breakpoints, $custom-breakpoints);
+
+@import '../../../node_modules/bootstrap/scss/maps';
+@import '../../../node_modules/bootstrap/scss/mixins';
 

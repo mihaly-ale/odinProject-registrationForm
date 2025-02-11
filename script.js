@@ -4,8 +4,9 @@ const regForm = document.getElementById('reg-form');
 const signinForm = document.getElementById('signin-form');
 
 function changeButtonText() {
-	const currentButtonText = this.textContent;
+	const currentButtonText = this.textContent.trim();
 	let message = this.previousElementSibling;
+	console.log('are we doing this?', this, currentButtonText.length, message);
 
 	currentButtonText === 'Log in'
 		? ((this.textContent = 'Create Account'),

@@ -9,11 +9,11 @@ img {
 	block-size: 100%;
 }
 
-// breakpoint when images goes aside
+// breakpoint when image goes aside
 @include media-breakpoint-down(bg-image-aside) {
 	#hero-image {
 		inline-size: 100vw;
-		block-size: 250px;
+		block-size: 300px;
 	}
 }
 
