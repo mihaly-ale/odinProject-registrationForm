@@ -6,11 +6,13 @@ body {
 	height: 100vh;
 }
 
-// 1120px
+// 1040px
 @include media-breakpoint-up(bg-image-aside) {
 	body {
+		--bg-image-min-width: 450px;
+
 		display: grid;
-		grid-template-columns: minmax(450px, 1fr) 1fr 1fr;
+		grid-template-columns: minmax(var(--bg-image-min-width), 1fr) 1fr 1fr;
 		grid-template-areas:
 			'heroImage header header'
 			'heroImage main main'
@@ -31,6 +33,20 @@ body {
 
 	footer {
 		grid-area: footer;
+	}
+}
+
+// 1400px
+@include media-breakpoint-up(xxl) {
+	body {
+		--bg-image-min-width: 650px;
+	}
+}
+
+// 1600px
+@include media-breakpoint-up(bg-image-50vw) {
+	body {
+		--bg-image-min-width: 50vw;
 	}
 }
 
