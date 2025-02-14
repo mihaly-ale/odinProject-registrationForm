@@ -7,7 +7,12 @@
 		<link rel="stylesheet" href="styles/css/main.css" />
 		<style>
 			body {
-				background: linear-gradient(var(--bs-primary), var(--bs-secondary));
+				background: linear-gradient(
+					var(--bs-brand-primary),
+					var(--bs-brand-secondary)
+				);
+
+				/* inline styles to override display:grid */
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -22,7 +27,7 @@
 
 	<body class="container">
 		<h1 class="display-1">Form sent</h1>
-		<div id="results" class="mb-2"></div>
+		<div id="results" class="mb-50"></div>
 		<p>
 			The GET method send
 			<span class="fst-italic">the form data in the URL</span>, for this reason
@@ -30,14 +35,16 @@
 			search and similar fields, where secrecy is not important.
 		</p>
 
-		<div class="border border-1 border-dark-subtle rounded-1 py-1 px-2">
+		<div class="border border-1 border-dark rounded-1 py-25 px-50">
 			<p class="fst-italic">In this case :</p>
 			<div>
 				<p id="urlParagraph"></p>
 			</div>
 		</div>
 
-		<a href="/" class="fs-2 btn btn-lg btn-dark btn-outline-primary"
+		<a
+			href="/"
+			class="fs-2 btn btn-lg btn-brand-dark btn-outline-brand-primary border-0 shadow-lg"
 			>Back to the form</a
 		>
 		<script>

@@ -26,10 +26,11 @@
 		<script src="script.js" defer></script>
 	</head>
 
-	<body class="bg-light">
-		<header class="mt-2 mt-md-5">
-			<h1 class="display-1 text-dark text-center px-5">
-				For whom the bells <em class="text-bg-dark px-2">swing.</em>
+	<body class="bg-brand-light text-brand-dark">
+		<header class="mt-50 mt-md-300">
+			<h1 class="display-1 text-brand-dark text-center px-300">
+				For whom the bells
+				<em class="bg-brand-dark text-brand-secondary px-50">swing.</em>
 			</h1>
 		</header>
 		<img
@@ -38,16 +39,16 @@
 			id="hero-image"
 			class="img-fluid object-fit-cover" />
 
-		<main class="container my-5">
+		<main class="container my-300">
 			<!-- registration form -->
 			<form
 				action="results.html"
 				id="reg-form"
-				class="d-flex flex-column mx-auto mb-5 gap-2 gap-xxl-4">
+				class="d-flex flex-column mx-auto mb-300 gap-50 gap-xxl-150">
 				<p class="info" aria-hidden="true">* Required field</p>
 				<div class="form-group | flex-fill">
 					<label
-						class="fw-normal align-self-start fs-5 pb-1 me-xxl-3 flex-shrink-0 flex-grow-0 text-end"
+						class="fw-normal align-self-start fs-5 pb-25 me-xxl-100 flex-shrink-0 flex-grow-0 text-end"
 						for="full-name"
 						>Name:
 						<span class="fs-4 lh-sm align-text-bottom" aria-hidden="true"
@@ -56,7 +57,7 @@
 					>
 					<div class="input-wrapper | w-100">
 						<input
-							class="form-control mb-1"
+							class="form-control mb-25"
 							type="text"
 							id="full-name"
 							name="full-name"
@@ -64,76 +65,78 @@
 							required
 							minlength="3"
 							maxlength="100" />
-						<p class="info ms-2" id="name-hint">Please enter your full name.</p>
+						<p class="info ms-50" id="name-hint">
+							Please enter your full name.
+						</p>
 					</div>
 				</div>
 
 				<div class="form-group | flex-fill">
 					<label
-						class="fw-normal align-self-start fs-5 pb-1 me-xxl-3 flex-shrink-0 flex-grow-0 text-end"
+						class="fw-normal align-self-start fs-5 pb-25 me-xxl-100 flex-shrink-0 flex-grow-0 text-end"
 						for="reg-email"
 						>Email: <span class="fs-4 lh-sm" aria-hidden="true">*</span></label
 					>
 					<div class="input-wrapper | w-100">
 						<input
-							class="form-control mb-1"
+							class="form-control mb-25"
 							type="email"
 							id="reg-email"
 							name="reg-email"
 							aria-describedby="reg-email-hint"
 							required />
-						<p class="info ms-2" id="reg-email-hint">&nbsp;</p>
+						<p class="info ms-50" id="reg-email-hint">&nbsp;</p>
 					</div>
 				</div>
 
 				<div class="form-group | flex-fill">
 					<label
-						class="fw-normal align-self-start fs-5 pb-1 me-xxl-3 flex-shrink-0 flex-grow-0 text-end"
+						class="fw-normal align-self-start fs-5 pb-25 me-xxl-100 flex-shrink-0 flex-grow-0 text-end"
 						for="phone"
 						>Phone:</label
 					>
 					<div class="input-wrapper | w-100">
 						<input
-							class="form-control mb-1"
+							class="form-control mb-25"
 							type="tel"
 							id="phone"
 							name="phone"
 							aria-describedby="phone-hint" />
-						<p class="info ms-2" id="phone-hint">&nbsp;</p>
+						<p class="info ms-50" id="phone-hint">&nbsp;</p>
 					</div>
 				</div>
 
 				<div class="form-group | flex-fill">
 					<label
-						class="fw-normal align-self-start fs-5 pb-1 me-xxl-3 flex-shrink-0 flex-grow-0 text-end"
+						class="fw-normal align-self-start fs-5 pb-25 me-xxl-100 flex-shrink-0 flex-grow-0 text-end"
 						for="reg-password"
 						>Password:
 						<span class="fs-4 lh-sm" aria-hidden="true">*</span></label
 					>
 					<div class="input-wrapper | w-100">
 						<input
-							class="form-control mb-1"
+							class="form-control mb-25"
 							type="password"
 							id="reg-password"
 							name="reg-password"
 							aria-describedby="reg-password-hint"
 							required
 							pattern="[A-Za-z]{3}[0-9]{3}" />
-						<p class="info ms-2" id="reg-password-hint">
+						<p class="info ms-50" id="reg-password-hint">
 							Your password has to contain 3 letters and 3 numbers.
 						</p>
 					</div>
 				</div>
 				<div class="form-group | flex-fill">
 					<label
-						class="fw-normal align-self-start fs-5 pb-1 me-xxl-3 flex-shrink-0 flex-grow-0 text-end text-nowrap"
+						class="fw-normal align-self-start fs-5 pb-25 me-xxl-100 flex-shrink-0 flex-grow-0 text-end text-nowrap"
 						for="confirm-reg-password"
 						>Confirm Password:
 						<span class="fs-4 lh-sm" aria-hidden="true">*</span></label
 					>
 					<div class="input-wrapper | w-100">
 						<input
-							class="form-control mb-1"
+							class="form-control mb-25"
 							type="password"
 							id="confirm-reg-password"
 							name="confirm-reg-password"
@@ -147,7 +150,7 @@
 				<button
 					type="submit"
 					id="reg-form-submit"
-					class="align-self-center btn btn-lg btn-primary shadow border-2 mt-3 fw-semibold">
+					class="align-self-center btn btn-lg btn-brand-primary btn-outline-brand-dark border-0 shadow mt-100 fw-semibold">
 					Create Account
 				</button>
 			</form>
@@ -157,103 +160,103 @@
 				action="results.html"
 				method="GET"
 				id="signin-form"
-				class="d-flex flex-column mx-auto mb-5 gap-1 gap-xxl-4"
+				class="d-flex flex-column mx-auto mb-300 gap-25 gap-xxl-150"
 				data-invisible="true">
 				<p class="info" aria-hidden="true">* Required field</p>
 				<div class="form-group | flex-fill">
 					<label
-						class="fw-normal align-self-start fs-5 pb-1 me-xxl-3 flex-shrink-0 flex-grow-0 text-end"
+						class="fw-normal align-self-start fs-5 pb-25 me-xxl-100 flex-shrink-0 flex-grow-0 text-end"
 						for="user-email"
 						>Email: <span class="fs-4 lh-sm" aria-hidden="true">*</span></label
 					>
 					<div class="input-wrapper | w-100">
 						<input
-							class="form-control mb-1"
+							class="form-control mb-25"
 							type="email"
 							id="user-email"
 							name="user-email"
 							required />
-						<p class="info ms-2">&nbsp;</p>
+						<p class="info ms-50">&nbsp;</p>
 					</div>
 				</div>
 
 				<div class="form-group | flex-fill">
 					<label
-						class="fw-normal align-self-start fs-5 pb-1 me-xxl-3 flex-shrink-0 flex-grow-0 text-end"
+						class="fw-normal align-self-start fs-5 pb-25 me-xxl-100 flex-shrink-0 flex-grow-0 text-end"
 						for="user-password"
 						>Password:
 						<span class="fs-4 lh-sm" ria-hidden="true">*</span></label
 					>
 					<div class="input-wrapper | w-100">
 						<input
-							class="form-control mb-1"
+							class="form-control mb-25"
 							type="password"
 							id="user-password"
 							name="user-password"
 							required
 							pattern="[A-Za-z]{3}[0-9]{3}" />
-						<p class="info ms-2">&nbsp;</p>
+						<p class="info ms-50">&nbsp;</p>
 					</div>
 				</div>
 
 				<button
 					type="submit"
 					id="signin-form-submit"
-					class="align-self-center btn btn-lg btn-primary shadow border-2 mt-3">
+					class="align-self-center btn btn-lg btn-brand-primary btn-outline-brand-dark border-0 shadow mt-100 fw-semibold">
 					Log in
 				</button>
 			</form>
 
 			<div
-				class="d-flex row-gap-2 column-gap-3 flex-wrap justify-content-center align-items-baseline mx-auto fs-5">
+				class="d-flex row-gap-50 column-gap-100 flex-wrap justify-content-center align-items-baseline mx-auto fs-5">
 				<p class="m-0">Already have an account?</p>
 				<button
 					id="toggle-button"
-					class="btn btn-dark shadow btn-outline-primary fs-5 fw-semibold border-2">
+					class="btn btn-brand-dark btn-outline-brand-primary shadow fs-5 fw-semibold border-0">
 					Log in
 				</button>
 			</div>
 		</main>
 
-		<footer class="px-0 pt-5 mt-auto">
-			<div class="primary-footer | vstack align-items-center mb-5">
+		<footer class="px-0 pt-300 mt-auto">
+			<div class="primary-footer | vstack align-items-center mb-300">
 				<img
 					src="assets/logos/bellers-logo-light-bg.png"
 					alt="Bellers."
-					class="img-fluid mb-5"
+					class="img-fluid mb-300"
 					width="250" />
 				<ul
-					class="legal-links | list-unstyled d-flex flex-column flex-sm-row gap-3">
+					class="legal-links | list-unstyled d-flex flex-column flex-sm-row gap-150">
 					<li>
 						<a
 							href="/"
-							class="link-dark link-underline-opacity-0-hover fs-5 p-2"
+							class="link-dark link-underline-opacity-0-hover fs-5 p-50"
 							>Cookie Policy</a
 						>
 					</li>
 					<li>
 						<a
 							href="/"
-							class="link-dark link-underline-opacity-0-hover fs-5 p-2"
+							class="link-dark link-underline-opacity-0-hover fs-5 p-50"
 							>Privacy Policy</a
 						>
 					</li>
 					<li>
 						<a
 							href="/"
-							class="link-dark link-underline-opacity-0-hover fs-5 p-2"
+							class="link-dark link-underline-opacity-0-hover fs-5 p-50"
 							>Booking Policy</a
 						>
 					</li>
 				</ul>
 			</div>
 			<div class="secondary_footer | text-bg-dark text-center">
-				<p class="m-0 p-3">
+				<p class="m-0 p-100">
 					Made for
 					<a
 						href="https://www.theodinproject.com"
 						target="_blank"
-						class="fst-italic link-underline-opacity-0-hover"
+						class="fst-italic link-underline-opacity-0-hover link-brand-primary"
 						>The Odin Project</a
 					>
 					by

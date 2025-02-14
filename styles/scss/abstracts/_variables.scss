@@ -1,19 +1,105 @@
-@use 'sass:map';
-
-$primary: #f3d117;
-$secondary: #ad552d;
-$light: #afb7ba;
-
 @import '../../../node_modules/bootstrap/scss/functions';
-@import '../../../node_modules/bootstrap/scss/variables';
 
-$custom-breakpoints: (
+// Define brand colors
+$brand-yellow: #f3d117;
+$brand-orange: #e87742;
+$brand-light: #dadbda;
+$brand-dark: #232b2b;
+
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/variables-dark';
+@import '../../../node_modules/bootstrap/scss/maps';
+
+// Define custom maps
+$brand-colors: (
+	brand-yellow: $brand-yellow,
+	brand-orange: $brand-orange,
+	brand-light: $brand-light,
+	brand-dark: $brand-dark,
+);
+
+$brand-theme-colors: (
+	brand-primary: $brand-yellow,
+	brand-secondary: $brand-orange,
+	brand-light: $brand-light,
+	brand-dark: $brand-dark,
+);
+
+// The next two declarations are necessary:
+//  for the $brand-spacers map
+$spacer: 1rem !default;
+//  To have only the custom spacer classes (25, 50, 100 etc)
+$spacers: (
+	0: 0,
+);
+$brand-spacers: (
+	25: $spacer * 0.25,
+	50: $spacer * 0.5,
+	100: $spacer,
+	150: $spacer * 1.5,
+	200: $spacer * 2,
+	250: $spacer * 2.5,
+	300: $spacer * 3,
+	350: $spacer * 3.5,
+	400: $spacer * 4,
+	450: $spacer * 4.5,
+	500: $spacer * 5,
+);
+
+$brand-breakpoints: (
 	'bg-image-aside': 1040px,
 	'bg-image-50vw': 1600px,
 );
 
-$grid-breakpoints: map-merge($grid-breakpoints, $custom-breakpoints);
+// merge brand specific maps into to Bootstrap colors map
+// !!! The $spacers map has only the new values, as it was emptied before the merge
+$colors: map-merge($colors, $brand-colors);
+$theme-colors: map-merge($theme-colors, $brand-theme-colors);
+$spacers: map-merge($brand-spacers, $spacers);
+$grid-breakpoints: map-merge($grid-breakpoints, $brand-breakpoints);
 
-@import '../../../node_modules/bootstrap/scss/maps';
+// This is only needed as button and links are using the main colors's rgb format
+// Because the brand naming (yellow vs brand-yellow) ads another hyphenated string certain bootstrap implementations of the sass functions unable to process the extra string
+// see helpers/_colored-links.scss : (--#{$prefix}#{$color}-rgb)
+:root {
+	--bs-brand-primary-rgb: #{to-rgb($brand-yellow)};
+	--bs-brand-secondary-rgb: #{to-rgb($brand-orange)};
+	--bs-brand-light-rgb: #{to-rgb($brand-light)};
+	--bs-brand-dark-rgb: #{to-rgb($brand-dark)};
+}
+
 @import '../../../node_modules/bootstrap/scss/mixins';
+@import '../../../node_modules/bootstrap/scss/utilities';
+
+// Certain classes had to be manually added, as Bootstrap don't rely on maps to create them
+// For example button classes are created from the $theme-colors map
+$utilities: map-merge(
+	$utilities,
+	(
+		'brand-text-color': (
+			property: color,
+			class: text-brand,
+			responsive: true,
+			values: (
+				primary: $brand-yellow,
+				secondary: $brand-orange,
+				light: $brand-light,
+				dark: $brand-dark,
+			),
+		),
+		'brand-background-color': (
+			property: background-color,
+			class: bg-brand,
+			responsive: true,
+			values: (
+				primary: $brand-yellow,
+				secondary: $brand-orange,
+				light: $brand-light,
+				dark: $brand-dark,
+			),
+		),
+	)
+);
+
+@import '../../../node_modules/bootstrap/scss/utilities/api';
 
