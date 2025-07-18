@@ -1,5 +1,30 @@
 {
-  "dependencies": {
-    "bootstrap": "^5.3.3"
-  }
+	"name": "odinproject-registrationform",
+	"version": "1.0.0",
+	"description": "[Live preview](https://mihaly-ale.github.io/odinProject-registrationForm/)",
+	"main": "script.js",
+	"scripts": {
+		"watch:sass": "sass --watch styles/scss/main.scss styles/css/main.css",
+		"purgecss": "purgecss --css styles/css/main.css --content index.html --output ./style.css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mihaly-ale/odinProject-registrationForm.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/mihaly-ale/odinProject-registrationForm/issues"
+	},
+	"homepage": "https://github.com/mihaly-ale/odinProject-registrationForm#readme",
+	"dependencies": {
+		"bootstrap": "^5.3.3"
+	},
+	"devDependencies": {
+		"@fullhuman/postcss-purgecss": "^7.0.2",
+		"postcss": "^8.5.6",
+		"postcss-cli": "^11.0.1",
+		"purgecss": "^7.0.2",
+		"sass": "^1.89.2"
+	}
 }
