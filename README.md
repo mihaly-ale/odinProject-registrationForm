@@ -32,13 +32,25 @@
 
 - Add radio buttons to choose weight
 - Implement color schemes
-- Remove unused css classes
+- ~~Remove unused css classes~~ [^3]
 
+  ### New commits added to improve lighthouse performance:
+    - Reduced CSS stylesheet by ~95% [^3](https://github.com/mihaly-ale/odinProject-registrationForm/commit/87100b16c9cc0f2ec82568a9e2a6a07a3a45c9fe)
+    - Served hero image in webp formats [^4](https://github.com/mihaly-ale/odinProject-registrationForm/commit/34f4c11d650303c8961ccc5ad0ea28301b60cb2c)
+
+      |  | LCP | Performance | Best Practices |
+      |--- | --- | --- | --- |
+      | old | 2.1 | 98 | 96 |
+      | new | 1.7* | 100 | 100|
+      * LCP mean ≈ (1.5 + 1.7 + 1.8) / 3 ≈ **1.67s**
+
+    <br/>
 ---
 
 - bg-image.jpg: [Photo by Jan Gunnar Nygård](https://pixabay.com/photos/kettlebell-crossfit-training-gym-6995813/)
 <!-- Links: -->
 
-[^1]: https://github.com/mihaly-ale/sass-project-starter
-[^1]: https://realfavicongenerator.net/
+[^1]: https://github.com/mihaly-ale/SCSS-boilerplate-lite
+[^2]: https://realfavicongenerator.net/
+[^3]: https://github.com/mihaly-ale/odinProject-registrationForm/commit/87100b16c9cc0f2ec82568a9e2a6a07a3a45c9fe
 
